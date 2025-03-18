@@ -12,3 +12,4 @@ If you haven't already, clone this repository:
 ```sh
 git clone https://github.com/YOUR_USERNAME/BodyMassIndex.git
 cd BodyMassIndex
+### ** Make sure to download Python!**
