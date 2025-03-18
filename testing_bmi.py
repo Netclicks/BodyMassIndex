@@ -49,7 +49,8 @@ class TestCalculateBMI(unittest.TestCase):
 
 class TestCategorizeBMI(unittest.TestCase):
     # Testing Weak N x 1
-    def test_categorize_bmi(self):
+    # Underweight Test Cases
+    def test_underweight_0(self):
         #0 is ON
         self.assertEqual(categorize_bmi(0), "Underweight")
 
@@ -57,7 +58,7 @@ class TestCategorizeBMI(unittest.TestCase):
         #0.1 is OFF
         self.assertEqual(categorize_bmi(0.1), "Underweight")
 
-    def test_underweight_0(self):
+    def test_underweight_10(self):
         #Interior
         self.assertEqual(categorize_bmi(10), "Underweight")
 
@@ -68,6 +69,8 @@ class TestCategorizeBMI(unittest.TestCase):
     def test_underweight_185(self):
         #18.5 is ON
         self.assertEqual(categorize_bmi(18.5), "Normal weight")
+
+    #Normal Weight Test Cases
 
     def test_weight_184(self):
         #184 is OFF
@@ -89,6 +92,8 @@ class TestCategorizeBMI(unittest.TestCase):
         #25 is OFF
         self.assertEqual(categorize_bmi(25), "Overweight")
 
+    #Overweight Tests
+
     def test_overweight_249(self):
         #24.9 is OFF
         self.assertEqual(categorize_bmi(24.9), "Normal weight")
@@ -108,6 +113,8 @@ class TestCategorizeBMI(unittest.TestCase):
     def test_overweight_30(self):
         #30 is OFF
         self.assertEqual(categorize_bmi(30), "Obese")
+
+    #Obese Test Cases
 
     def test_obese_37(self):
         #Interior
