@@ -7,7 +7,9 @@ from main import categorize_bmi
 class TestCalculateBMI(unittest.TestCase):
     def test_calculate_bmi(self):
         self.assertAlmostEqual(calculate_bmi(6,1,126), 16.6)
-        self.assertAlmostEqual(calculate_bmi(5,9,120), 17.7)
+        self.assertAlmostEqual(calculate_bmi(5,9,150), 22.2)
+        self.assertAlmostEqual(calculate_bmi(5, 9, 200), 29.5)
+        self.assertAlmostEqual(calculate_bmi(5, 9, 250), 36.9)
 
     #Testing Negative Values
 
